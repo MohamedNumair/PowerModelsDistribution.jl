@@ -299,8 +299,7 @@ function create_dss_object(::Type{T}, property_pairs::Vector{Pair{String,String}
             puz1 = complex(vsource.puz1...)
             puz2 = complex(vsource.puz2...)
             puz0 = complex(vsource.puz0...)
-
-            vsource.r1 = real(vsource.puz1) * Zbase
+            vsource.r1 = real(puz1) * Zbase
             vsource.x1 = imag(puz1) * Zbase
             r2 = real(puz2) * Zbase
             x2 = imag(puz2) * Zbase
